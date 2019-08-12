@@ -4,43 +4,57 @@ require_once('Human.php');
 require_once('ListOfHumans.php');
 session_start();
 
-echo("<table><tr><td>");
-//Form for adding humans
-echo("<form method='post' action=''><h3>Neue Person hinzufügen</h3><table cellpadding='3px'>
+
+#region Datenbankverbindung
+$mysqli = new mysqli(HUMANS_DB_HOST,HUMANS_DB_USER,HUMANS_DB_PW,HUMANS_DB_DATABASE);
+
+if($mysqli === false){
+    die("Fehler: " . $mysqli->connect_error);
+}
+
+if($mysqli->connect_error){
+    die("Fehler: " . $mysqli->connect_error);
+}
+
+#endregion
+
+#region Formulare
+// Form for adding humans
+echo("<table><tr><td><form method='post' action=''><h3>Neue Person hinzufügen</h3><table cellpadding='3px'>
 <tr><td>Nachname: </td><td><input type='text' name='lastName'></td></tr>
 <tr><td>Vorname: </td><td><input type='text' name='firstName'></td></tr>
 <tr><td>Alter: </td><td><input type='number' name='age'></td></tr>
 <tr><td>Geschlecht: </td><td><input type='text' name='gender' </td></tr>
 <tr><td><input type='submit' name='add' value='Hinzufügen'></td><td><input type='reset' name='reset' </td></tr>
-</table></form>");
+</table></form></td>");
 
-echo("</td><td>");
 
-//Form for altering humans
-echo("<form method='post' action=''><h3>Person ändern</h3><table cellpadding='3px'>
+// Form for altering humans
+echo("<td><form method='post' action=''><h3>Person ändern</h3><table cellpadding='3px'>
 <tr><td>Id: </td><td><input type='text' name='id'></td></tr>
 <tr><td>Nachname: </td><td><input type='text' name='lastName'></td></tr>
 <tr><td>Vorname: </td><td><input type='text' name='firstName'></td></tr>
 <tr><td>Alter: </td><td><input type='number' name='age'></td></tr>
 <tr><td>Geschlecht: </td><td><input type='text' name='gender' </td></tr>
 <tr><td><input type='submit' name='alter' value='Ändern'></td><td><input type='reset' name='reset' </td></tr>
-</table></form>");
+</table></form></td>");
 
-echo("</td><td>");
 
-//Form for removing humans
-echo("<form method='post' action=''><h3>Person löschen</h3><table cellpadding='3px'>
+// Form for removing humans
+echo("<td><form method='post' action=''><h3>Person löschen</h3><table cellpadding='3px'>
 <tr><td>Id: </td><td><input type='text' name='id'></td></tr>
 <tr><td><input type='submit' name='remove' value='Löschen'></td><td><input type='reset' name='reset' </td></tr>
-</table></form>");
-echo("</td></tr></table>");
+</table></form></td></tr></table>");
+#endregion
 
-//if this is the initial run, list gets initialized and stored in session variable
+#region initialisierung
 if(!isset($_SESSION['list'])){
 
     $list = new ListOfHumans();
     $_SESSION['list'] = $list;
 }
+#endregion
+
 //if this isn't the initial run
 else{
 
