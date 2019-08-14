@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6848728-efe5-4b4a-85b7-c841991f8aaa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workHours.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Human.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListOfHumans.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/PHPStormProjects/untitled" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -48,7 +51,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565611067761</updated>
-      <workItem from="1565611069125" duration="5185000" />
+      <workItem from="1565611069125" duration="5343000" />
+      <workItem from="1565675923583" duration="4689000" />
+      <workItem from="1565681291462" duration="25720000" />
     </task>
     <task id="LOCAL-00001" summary="Erster Commit">
       <created>1565611592294</created>
@@ -57,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565611592296</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Zwischenschritt migration session zu datenbank">
+      <created>1565622081500</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565622081500</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -76,6 +90,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Erster Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erster Commit" />
+    <MESSAGE value="Zwischenschritt migration session zu datenbank" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zwischenschritt migration session zu datenbank" />
   </component>
 </project>
